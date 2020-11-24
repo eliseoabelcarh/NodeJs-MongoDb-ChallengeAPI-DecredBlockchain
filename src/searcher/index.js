@@ -1,13 +1,13 @@
 const searcherFactory = require("./factories/searcherFactory")
 
 
-const crearSearcher = (dao) => {
+const crearSearcher = () => {
 
     return {
 
         searchData: async ({ id, type }) => {
 
-            let searcher = searcherFactory.getInstance(type, dao)
+            let searcher = searcherFactory.getInstance(type)
             return await searcher.search(id)
 
         }
