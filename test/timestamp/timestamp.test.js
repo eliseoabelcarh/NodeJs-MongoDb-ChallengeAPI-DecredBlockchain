@@ -1,5 +1,3 @@
-
-
 const timestampFactory = require('../../src/timestamp/factory/timestampFactory')
 const assert = require('assert')
 

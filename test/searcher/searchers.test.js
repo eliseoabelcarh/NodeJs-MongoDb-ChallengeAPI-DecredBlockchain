@@ -1,7 +1,6 @@
 const daoFactory = require('../../src/dao/factory/daoFactory')
 const { crearSearcher } = require('../../src/searcher/index')
 const assert = require('assert')
-const fs = require('fs')
 
 
 const binary = new Buffer.from('./src/assets/logo.jpg')

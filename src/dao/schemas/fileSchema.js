@@ -8,7 +8,7 @@ const fileSchemaColection = 'files'
 const FileSchema = new Schema({
     id: Number,
     type: String,
-    data: Buffer,//BLOB = new Buffer(0);
+    data: Buffer,
 })
 
 const fileSchemaModel = mongoose.model(fileSchemaColection, FileSchema)

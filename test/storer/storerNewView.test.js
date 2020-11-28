@@ -1,7 +1,7 @@
 const daoFactory = require('../../src/dao/factory/daoFactory')
 const storerNewViewFactory = require('../../src/storer/factories/storerNewView')
 const assert = require('assert')
-const { crearViewModel } = require('../../src/models/modeloView')
+
 
 const getRandom = () => {
     return Number.parseInt(Math.random() * (5000 - 100) + 100)

@@ -85,7 +85,7 @@ describe('TEST PARA USE CASE VERIFICATION', () => {
         cu = useCasesFactory.cuVerification()
     })
     afterEach(async () => {
-        //await dao.cleanAll()
+        await dao.cleanAll()
     })
 
     describe('recibimos un request de servidor para stampear en blockchain', () => {
@@ -132,7 +132,7 @@ describe('TEST PARA USE CASE CHECKER', () => {
         cu = useCasesFactory.cuChecker()
     })
     afterEach(async () => {
-        //await dao.cleanAll()
+        await dao.cleanAll()
     })
 
     describe('recibimos un request con data para compartir por usuario para verificar en blockchain', () => {
@@ -177,7 +177,7 @@ describe('TEST PARA USE CASE VIEWER', () => {
         cu = useCasesFactory.cuViewer()
     })
     afterEach(async () => {
-        //await dao.cleanAll()
+        await dao.cleanAll()
     })
 
     describe('recibimos un request con solicitud de una view en estado válida', () => {
@@ -220,10 +220,6 @@ describe('TEST PARA USE CASE VIEWER', () => {
                 assert.deepStrictEqual('INVALID_ARGS', error.type)
                 return true
             })
-
-
-
-            //devuelve un hash único - será utilizado como id en la url de views
 
         })
     })

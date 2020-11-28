@@ -1,28 +1,7 @@
 const daoFactory = require('../../src/dao/factory/daoFactory')
 const { crearUpdater } = require('../../src/updater/index')
 const assert = require('assert')
-//const fs = require('fs')
-
-
 const fs = require('fs').promises;
-
-/* async function loadMonoCounter() {
-    const data = await fs.readFile("monolitic.txt", "binary");
-    var encodedImage = new Buffer(data, 'binary').toString('base64');
-    return encodedImage
-}
-
-
-fs.readFile('image.jpg', function (err, data) {
-    if (err) throw err;
-
-    // Encode to base64 for transport
-    var encodedImage = new Buffer(data, 'binary').toString('base64');
-
-    // Decode from base64
-    var decodedImage = new Buffer(encodedImage, 'base64').toString('binary');
-});
- */
 
 
 const getBinary = async () => {
@@ -35,8 +14,6 @@ const getBase64 = async () => {
 
 }
 
-/* const binary = await new Buffer.from('./src/assets/logo.jpg', 'binary')
-const binaryThumb = new Buffer.from('./src/assets/logo.jpg', 'binary') */
 
 const user = {
     id: 289465,

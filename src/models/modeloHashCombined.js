@@ -1,6 +1,3 @@
-
-
-
 /* const forHash = {
 0: userId,
 1: signature,
