@@ -124,7 +124,16 @@ const getBinary = async (pathImage) => {
 
 
 
-### Configuration Project
+## Tests para Proyecto
+```
+npm install
+```
+```
+npm run tdd
+```
+
+
+## Configuration Project
 
 * Este Proyecto utiliza MongoDB como persistencia.
 Para agregar nuevo en: ` /src/dao/factory/daoFactory/ `
@@ -138,7 +147,8 @@ DAO_TYPE = 'mongodb'
 
 CNX_STRING_MONGO = 'mongodb+srv://<user>:<password>@cluster0.jxcuw.mongodb.net/<databse>?retryWrites=true&w=majority'
 ```
-## DECRED TIMESTAMP APIs
+
+#### DECRED TIMESTAMP APIs
 
 ### Timestamp network 
  * 'testnet' or 'mainnet' 
