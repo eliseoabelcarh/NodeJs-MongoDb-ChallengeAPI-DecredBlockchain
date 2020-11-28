@@ -16,8 +16,8 @@ const crearModeloHashCombined = (forHash, hasher) => {
     const hash1 = hasher.hash({ data: JSON.stringify(userId) })
     const hash2 = hasher.hash({ data: JSON.stringify(signature) })
     const hash3 = hasher.hash({ data })
-    const hashesCombined = combineHashes(hash1, hash2, hash3)
-    return { id: forHash[0], combined: hasher.hash(hashesCombined) }
+    const hashesCombined = combineHashes([hash1, hash2, hash3])
+    return { id: forHash[0], combined: hasher.hash({ data: hashesCombined }) }
 
 
 }
@@ -30,5 +30,5 @@ function combineHashes(array) {
     for (const hash of array) {
         res += hash
     }
-    return hash
+    return res
 }

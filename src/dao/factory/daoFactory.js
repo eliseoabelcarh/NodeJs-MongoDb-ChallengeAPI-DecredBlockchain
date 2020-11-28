@@ -2,7 +2,7 @@ const { getConfigDaoType } = require('../configs/daoType')
 const { getConfigMongo } = require('../configs/mongoConfig')
 
 const daoUsersMongo = require('../types/daoUsersMongo')
-const daoFilesMongo = require('../types/daoFilesMongo')
+const daoViewsMongo = require('../types/daoViewsMongo')
 
 const { type } = getConfigDaoType()
 const configMongo = getConfigMongo()
@@ -12,7 +12,7 @@ const configMongo = getConfigMongo()
 let daoFactory = (function () {
 
     let daoInstance
-    let daoFilesInstance
+    let daoViewsInstance
 
     function create() {
         if (type === 'mongodb') {
@@ -20,27 +20,28 @@ let daoFactory = (function () {
         }
         throw new Error('tipo de DaoUsers no encontrado')
     }
-    function createDaoFiles() {
+    function createDaoViews() {
         if (type === 'mongodb') {
-            return daoFilesMongo.getInstance(configMongo)
+            return daoViewsMongo.getInstance(configMongo)
         }
-        throw new Error('tipo de DaoFiles no encontrado')
+        throw new Error('tipo de DaoUsers no encontrado')
     }
 
 
     return {
         getDao: function () {
             if (!daoInstance) {
-                daoInstance = await create()
+                daoInstance = create()
             }
             return daoInstance
         },
-        getDaoFiles: function () {
-            if (!daoFilesInstance) {
-                daoFilesInstance = await createDaoFiles()
+        getDaoViews: function () {
+            if (!daoViewsInstance) {
+                daoViewsInstance = createDaoViews()
             }
-            return daoFilesInstance
+            return daoViewsInstance
         },
+
     }
 
 })()

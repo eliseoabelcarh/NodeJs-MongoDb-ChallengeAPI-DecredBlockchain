@@ -21,7 +21,8 @@ const timestampFactory = (function () {
             },
             verifyOne: async ({ id, digest }) => {
                 const url = `https://time.decred.org:${network}/${versionAPI}/verify/`
-                const data = { id, "digests": [digest], "timestamps": null }
+                const idX = id.toString()
+                const data = { id: idX, "digests": [digest], "timestamps": null }
                 const res = await axios.post(url, data)
                 //console.log('Resultado Verificación: ', res)
                 return res

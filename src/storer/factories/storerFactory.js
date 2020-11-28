@@ -1,29 +1,71 @@
-const storerPhotoIdFrontFactory = require("./storerPhotoIdFront")
+
+const daoFactory = require('../../dao/factory/daoFactory')
+
 const storerSignatureFactory = require("./storerSignature")
 const storerUsersLastnameFactory = require("./storerUsersLastname")
 const storerUsersNameFactory = require("./storerUsersName")
-const daoFactory = require('../../dao/factory/daoFactory')
+const storerPhotoIdFrontPathFactory = require("./storerPhotoIdFrontPath")
+const storerPhotoIdFrontPathThumbFactory = require("./storerPhotoIdFrontPathThumb")
+const storerPhotoIdFrontBinaryFactory = require("./storerPhotoIdFrontBinary")
+const storerPhotoIdFrontBinaryThumbFactory = require("./storerPhotoIdFrontBinaryThumb")
+const storerVerifiedNameFactory = require("./storerVerifiedName")
+const storerVerifiedLastnameFactory = require("./storerVerifiedLastname")
+
+const storerNewUserFactory = require('./storerNewUser')
+
+const storerNewViewFactory = require('./storerNewView')
+
 
 const dao = daoFactory.getDao()
-const daoFiles = daoFactory.getDaoFiles()
+const daoViews = daoFactory.getDaoViews()
 
 
 const storerFactory = {
 
     getInstance: function (type) {
 
-        if (type === 'photoIdFront') {
-            return storerPhotoIdFrontFactory.getInstance(daoFiles, type)
+        if (type === 'newUser') {
+            return storerNewUserFactory.getInstance(dao)
+        }
+        if (type === 'newView') {
+
+            return storerNewViewFactory.getInstance(daoViews)
+        }
+
+
+
+
+        if (type === 'usersName') {
+            return storerUsersNameFactory.getInstance(dao)
         }
         if (type === 'usersLastname') {
-            return storerUsersLastnameFactory.getInstance(dao, type)
-        }
-        if (type === 'usersName') {
-            return storerUsersNameFactory.getInstance(dao, type)
+            return storerUsersLastnameFactory.getInstance(dao)
         }
         if (type === 'signature') {
-            return storerSignatureFactory.getInstance(dao, type)
+            return storerSignatureFactory.getInstance(dao)
         }
+        if (type === 'verifiedName') {
+            return storerVerifiedNameFactory.getInstance(dao)
+        }
+        if (type === 'verifiedLastname') {
+            return storerVerifiedLastnameFactory.getInstance(dao)
+        }
+        if (type === 'photoIdFrontPath') {
+            return storerPhotoIdFrontPathFactory.getInstance(dao)
+        }
+        if (type === 'photoIdFrontPathThumb') {
+            return storerPhotoIdFrontPathThumbFactory.getInstance(dao)
+        }
+        if (type === 'photoIdFrontBinary') {
+            return storerPhotoIdFrontBinaryFactory.getInstance(dao)
+        }
+        if (type === 'photoIdFrontBinaryThumb') {
+            return storerPhotoIdFrontBinaryThumbFactory.getInstance(dao)
+        }
+
+
+
+
 
     }
 }

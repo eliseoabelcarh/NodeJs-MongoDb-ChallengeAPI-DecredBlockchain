@@ -10,7 +10,15 @@ const UserSchema = new Schema({
     name: String,
     lastname: String,
     email: String,
-    photoIdFront: String,
+    password: String,
+    signature: String,
+    verifiedName: Boolean,
+    verifiedLastname: Boolean,
+    photoIdFrontPath: String,
+    photoIdFrontPathThumb: String,
+    photoIdFrontBinary: Buffer,
+    photoIdFrontBinaryThumb: Buffer,
+
 })
 
 const userSchemaModel = mongoose.model(userSchemaColection, UserSchema)

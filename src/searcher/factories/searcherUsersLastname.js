@@ -25,4 +25,4 @@ const searcherUsersLastnameFactory = (function () {
 }
 )()
 
-module.exports = searcherUsersLastnamFactorye
+module.exports = searcherUsersLastnameFactory

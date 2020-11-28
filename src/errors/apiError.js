@@ -19,9 +19,16 @@ function crearErrorRecursoNoEncontrado(recurso, id) {
     error.type = 'NOT_FOUND'
     return error
 }
+function crearErrorEnModulo(modulo) {
+    const errMsg = 'error en módulo'
+    const err = new Error(`${modulo} - ${errMsg}`)
+    err.type = 'INTERNAL_ERROR'
+    return err
+}
 
 module.exports = {
     crearErrorDeBaseDeDatos,
     crearErrorArgumentosInvalidos,
-    crearErrorRecursoNoEncontrado
+    crearErrorRecursoNoEncontrado,
+    crearErrorEnModulo
 }

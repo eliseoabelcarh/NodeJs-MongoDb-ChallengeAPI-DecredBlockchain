@@ -1,28 +1,36 @@
-const { crearChecker } = require("../checker")
-const { getIdFromRequest, getDataTypeFromRequest } = require('../models/modeloRequestServer')
-
-
+const { getCheckRequestModel } = require('../models/modeloRequestServer')
+const { signatureMatch } = require('../models/modeloUser')
+const { crearOneTimeViewModel } = require('../models/modeloView')
+const { crearModeloForHash } = require('../models/modeloForHash')
 const cuCheckerFactory = (function () {
 
     let instance
 
-    function create(timestamp, hasher, searcher) {
-
-        const checker = crearChecker(timestamp, hasher, searcher)
+    function create(checker, hasher, searcher, storer) {
 
         return {
-            check: (req) => {
-                const id = getIdFromRequest(req)
-                const type = getDataTypeFromRequest(req)
-                return await checker.check({ id, type })
+            check: async (req) => {
+                const { id, signature, types } = await getCheckRequestModel(req, searcher)
+                const signatureDB = await searcher.searchData({ id, type: 'signature' })
+                signatureMatch(signatureDB, signature)
+                const datosForView = {}
+                for (const type of types) {
+                    const data = await searcher.searchData({ id, type })
+                    let forHash = crearModeloForHash({ id, data, signature, signatureDB })
+                    let res = await checker.check(forHash)
+                    if (res === 0 /*0 is success */) {
+                        datosForView[type] = await searcher.searchData({ id, type })
+                    }
+                }
+                return await crearOneTimeViewModel(datosForView, storer, hasher)
             }
         }
     }
 
     return {
-        getInstance: function (timestamp, hasher, searcher) {
+        getInstance: function (checker, hasher, searcher, storer) {
             if (!instance) {
-                instance = create(timestamp, hasher, searcher)
+                instance = create(checker, hasher, searcher, storer)
             }
             return instance
         }

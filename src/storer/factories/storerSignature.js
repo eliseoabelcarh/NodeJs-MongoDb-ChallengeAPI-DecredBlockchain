@@ -4,21 +4,21 @@ const storerSignatureFactory = (function () {
 
     let instance
 
-    function create(dao, type) {
+    function create(dao) {
 
 
         return {
             save: async (id, data) => {
-                return await dao.addSignatureById(id, data, type)
+                return await dao.addSignatureById(id, data)
             }
         }
 
     }
 
     return {
-        getInstance: function (dao, type) {
+        getInstance: function (dao) {
             if (!instance) {
-                instance = create(dao, type)
+                instance = create(dao)
             }
             return instance
         }

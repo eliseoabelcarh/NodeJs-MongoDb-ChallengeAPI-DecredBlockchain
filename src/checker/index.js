@@ -7,18 +7,13 @@ const crearChecker = (timestamp, hasher, searcher) => {
 
     return {
 
-        check: async ({ id, type }) => {
-            const signature = await searcher.searchData({ id, type: 'signature' })
-            const data = await searcher.searchData({ id, type })
-            const forHash = { 0: id.toString(), 1: signature, 2: data }
+        check: async (forHash) => {
             const { id, combined } = crearModeloHashCombined(forHash, hasher)
             const res = await timestamp.verifyOne({ id, digest: combined })
-            console.log('axios responseData ', res.data)
-            return res.data.results[0]
+            return res.data.digests[0].result
         }
 
     }
 }
-
 
 module.exports = { crearChecker }

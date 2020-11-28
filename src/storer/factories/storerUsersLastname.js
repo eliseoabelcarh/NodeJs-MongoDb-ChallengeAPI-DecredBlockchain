@@ -3,21 +3,21 @@ const storerUsersLastnameFactory = (function () {
 
     let instance
 
-    function create(dao, type) {
+    function create(dao) {
 
 
         return {
             save: async (id, data) => {
-                return await dao.addUsersLastnameById(id, data, type)
+                return await dao.addUsersLastnameById(id, data)
             }
         }
 
     }
 
     return {
-        getInstance: function (dao, type) {
+        getInstance: function (dao) {
             if (!instance) {
-                instance = create(dao, type)
+                instance = create(dao)
             }
             return instance
         }
