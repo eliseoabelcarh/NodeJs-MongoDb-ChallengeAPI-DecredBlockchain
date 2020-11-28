@@ -1,7 +1,7 @@
 const { crearModeloHashCombined } = require('../models/modeloHashCombined')
 
 
-const crearChecker = (timestamp, hasher, searcher) => {
+const crearChecker = (timestamp, hasher) => {
 
     // const forHash = {0: userId, 1: signature, 2: data }
 

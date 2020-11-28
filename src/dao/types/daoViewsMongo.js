@@ -83,13 +83,13 @@ async function conectar(config) {
             useFindAndModify: false,
             useCreateIndex: true
         })
-        console.log('...conectado a BD!')
+        //console.log('...conectado a BD!')
     } catch (error) {
         throw crearErrorDeBaseDeDatos(error.message)
     }
 }
 async function desconectar() {
-    console.log('...desconectando BD')
+    //console.log('...desconectando BD')
     await mongoose.connection.close()
 }
 

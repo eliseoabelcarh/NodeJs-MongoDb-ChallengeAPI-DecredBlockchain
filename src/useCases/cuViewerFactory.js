@@ -13,7 +13,6 @@ const cuViewerFactory = (function () {
             getView: async (req) => {
                 const { idView } = getViewRequestModel(req)
                 const { id, valid, view } = await searcher.searchData({ id: idView, type: 'view' })
-                console.log('searcchchhc ', { id, valid, view })
                 if (!valid) {
                     throw crearErrorArgumentosInvalidos('validez de vista', 'inválida')
                 }

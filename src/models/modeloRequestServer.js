@@ -74,27 +74,27 @@ const getRequestModel = async (req) => {
 const getUserModelFromRequest = (req) => {
     checkBodyRequest(req)
     const user = {}
-    if (!req.email) {
+    if (!req.body.email) {
         throw crearErrorArgumentosInvalidos('req.body.email', 'campo vacío')
     } else {
         user.email = req.body.email
     }
-    if (!req.name) {
+    if (!req.body.name) {
         throw crearErrorArgumentosInvalidos('req.body.name', 'campo vacío')
     } else {
         user.name = req.body.name
     }
-    if (!req.lastname) {
+    if (!req.body.lastname) {
         throw crearErrorArgumentosInvalidos('req.body.lastname', 'campo vacío')
     } else {
         user.lastname = req.body.lastname
     }
-    if (!req.password) {
+    if (!req.body.password) {
         throw crearErrorArgumentosInvalidos('req.body.password', 'campo vacío')
     } else {
         user.password = req.body.password
     }
-    if (!req.signature) {
+    if (!req.body.signature) {
         throw crearErrorArgumentosInvalidos('req.body.signature', 'campo vacío')
     } else {
         user.signature = req.body.signature

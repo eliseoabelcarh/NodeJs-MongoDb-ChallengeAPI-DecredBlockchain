@@ -10,7 +10,7 @@ const cuRegisterFactory = (function () {
         return {
             register: async (req) => {
                 const userModel = getUserModelFromRequest(req)
-                return await storer.saveData({ id: null, type: 'newUser', data: userModel })
+                return await storer.storeData({ id: null, type: 'newUser', data: userModel })
             }
         }
     }

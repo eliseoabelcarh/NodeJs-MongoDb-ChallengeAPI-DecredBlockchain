@@ -1,6 +1,3 @@
-
-const daoFactory = require('../../dao/factory/daoFactory')
-
 const updaterSignatureFactory = require("./updaterSignature")
 const updaterUsersLastnameFactory = require("./updaterUsersLastname")
 const updaterUsersNameFactory = require("./updaterUsersName")
@@ -12,6 +9,7 @@ const updaterVerifiedNameFactory = require("./updaterVerifiedName")
 const updaterVerifiedLastnameFactory = require("./updaterVerifiedLastname")
 const updaterViewFactory = require('./updaterView')
 
+const daoFactory = require('../../dao/factory/daoFactory')
 const dao = daoFactory.getDao()
 const daoViews = daoFactory.getDaoViews()
 
@@ -23,7 +21,6 @@ const updaterFactory = {
         if (type === 'newUser') {
             return updaterNewUserFactory.getInstance(dao)
         }
-
         if (type === 'usersName') {
             return updaterUsersNameFactory.getInstance(dao)
         }
@@ -54,9 +51,6 @@ const updaterFactory = {
         if (type === 'view') {
             return updaterViewFactory.getInstance(daoViews)
         }
-
-
-
 
     }
 }

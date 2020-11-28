@@ -23,7 +23,7 @@ const updater = crearUpdater()
 const textInterpreter = crearTextInterpreter()
 
 const stamper = crearStamper(timestamp, hasher)
-const checker = crearChecker(timestamp, hasher, searcher)
+const checker = crearChecker(timestamp, hasher)
 
 const useCasesFactory = {
 

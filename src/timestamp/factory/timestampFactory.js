@@ -24,7 +24,6 @@ const timestampFactory = (function () {
                 const idX = id.toString()
                 const data = { id: idX, "digests": [digest], "timestamps": null }
                 const res = await axios.post(url, data)
-                //console.log('Resultado Verificación: ', res)
                 return res
             }
         }

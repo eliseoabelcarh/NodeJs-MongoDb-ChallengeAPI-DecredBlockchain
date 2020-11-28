@@ -66,7 +66,7 @@ const crearUserModel = (datos) => {
         usuario.verifiedName = datos.verifiedName
     }
     else {
-        usuario.verifiedLastname = null
+        usuario.verifiedName = null
     }
     if (datos.verifiedLastname === true || datos.verifiedLastname === false) {
         usuario.verifiedLastname = datos.verifiedLastname

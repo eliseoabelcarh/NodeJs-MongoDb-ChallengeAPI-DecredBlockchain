@@ -22,10 +22,6 @@ describe('TEST PARA TIMESTAMP ', async () => {
             assert.deepStrictEqual(resultEsperado, res.data.results[0])
             assert.deepStrictEqual(idEsperado, res.data.id)
             assert.deepStrictEqual(digestEsperado, res.data.digests[0])
-            console.log('respuestsa test: ', res.data)
-            //0 OK 
-            //1 YA EXISTE -  SOLO PARA STMAP
-
         })
     })
     describe('verificamos algo que ya existe en la blockchain', async () => {
@@ -37,11 +33,8 @@ describe('TEST PARA TIMESTAMP ', async () => {
             const idEsperado = 'dcrtime cli'
             const digestEsperado = 'd412ba345bc44fb6fbbaf2db9419b648752ecfcda6fd1aec213b45a5584d1b13'
             const res = await timestamp.verifyOne({ id, digest })
-            //2 ERROR - NO EXISTE NO SE PUEDE VERIFICAR 
-            console.log('digestEsperado saved: ', res.data)
-            /*   console.log('resultEsperado saved: ', res.data.digests[0].result) */
-            /*   console.log('idEsperado saved: ', res.data.id) */
-            /*   console.log('transaction saved: ', res.data.digests[0].chaininformation.transaction) */
+
+
         })
     })
 })

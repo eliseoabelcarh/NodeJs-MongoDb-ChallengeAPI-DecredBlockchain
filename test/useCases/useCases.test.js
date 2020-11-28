@@ -24,6 +24,12 @@ const decodeBase64ToBinary = (data) => {
 const getRandom = () => {
     return Number.parseInt(Math.random() * (5000 - 100) + 100)
 }
+const getRandomSignature = () => {
+    const min = 1000
+    const max = 999999
+    return (Number.parseInt(Math.random() * (max - min) + min)).toString()
+}
+
 const randomId = getRandom()
 
 const data = {

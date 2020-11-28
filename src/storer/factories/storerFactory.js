@@ -1,6 +1,3 @@
-
-const daoFactory = require('../../dao/factory/daoFactory')
-
 const storerSignatureFactory = require("./storerSignature")
 const storerUsersLastnameFactory = require("./storerUsersLastname")
 const storerUsersNameFactory = require("./storerUsersName")
@@ -10,12 +7,10 @@ const storerPhotoIdFrontBinaryFactory = require("./storerPhotoIdFrontBinary")
 const storerPhotoIdFrontBinaryThumbFactory = require("./storerPhotoIdFrontBinaryThumb")
 const storerVerifiedNameFactory = require("./storerVerifiedName")
 const storerVerifiedLastnameFactory = require("./storerVerifiedLastname")
-
 const storerNewUserFactory = require('./storerNewUser')
-
 const storerNewViewFactory = require('./storerNewView')
 
-
+const daoFactory = require('../../dao/factory/daoFactory')
 const dao = daoFactory.getDao()
 const daoViews = daoFactory.getDaoViews()
 
@@ -35,6 +30,7 @@ const storerFactory = {
 
 
 
+        //no se usan - para dsps
         if (type === 'usersName') {
             return storerUsersNameFactory.getInstance(dao)
         }
