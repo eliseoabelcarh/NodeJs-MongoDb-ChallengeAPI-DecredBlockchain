@@ -7,35 +7,34 @@ Proyecto propio desarrollado para Blockchain Learning Challenge - Decred / Talen
  utilizando datos nativos de la blockchain de Decred
 
 
-## ABOUT THIS PROJECT
+## ACERCA DE ESTE PROYECTO
 
 Este proyecto es una idea propia original que fue pensada para solucionar un caso de uso específico 
 que viene obstaculizando el crecimiento del comercio de criptomonedas P2P.
 
-### PROBLEMA A SOLUCIONAR:
-Mi nombre es Abel, tengo casi 3 años de experiencia en el comercio de criptomonedas P2P 
+### PROBLEMA A SOLUCIONAR E INSPIRACIÓN:
+Mi nombre es Abel, tengo alrededor de 3 años de experiencia en el comercio de criptomonedas P2P 
 y miles de intercambios de bitcoin con usuarios de diferentes plataformas y países, uno de ellos es Localbitcoins.
 Desde que empecé con las criptomonedas hasta el día de hoy, Localbitcoins y otras plataformas han mejorado 
 en sus sistemas de verificación de identidad, sin embargo diariamente sigue existiendo desconfianza entre 
 los usuarios que operan en estas plataformas, por lo cual, es muy común que algún vendedor te solicite la 
 foto de tu dni u otra identificación. Es bastante claro que quien entrega la foto de su Dni corre un alto riesgo 
 en la seguridad de su privacidad, posible filtración de datos, robo de identidad, etc. 
-Por otra parte existe un problema para el vendedor que necesita pedir la foto a la otra persona, ya que implica una posible cancelación 
-de la venta en caso el comprador no quiera enviar la foto, asimismo, si no la solicita también corre diferentes riesgos como
+Por otra parte existe un problema para el vendedor que necesita pedir la foto a la otra persona, ya que, en caso el comprador no quiera entregar la foto, también implica una posible cancelación 
+de la venta y posible mala calificación en la reputación del mismo, asimismo, si no la solicita también corre diferentes riesgos como
 participar sin conocimiento en un sistema de lavado de dinero, narcotráfico, triangulaciones, hackeo de cuentas bancarias y más. Tengo una
-muy mala experiencia con éste último, que despúes de 3 años aún no termina de solucionarse.
-Pero no termina ahí... gracias a esa experiencia, nació este proyecto!!
+muy mala experiencia con éste último, pero no termina ahí... gracias a esa experiencia, nació este proyecto!!
 
 
 ### SOLUCIÓN:
 El proyecto total consta de 2 partes, para :
-BACKEND - Release 1 - Este repositorio pertenece a este release y proyecto.
-FRONTEND - Futuros releases - Ya comenzó el desarrollo, pero no es parte de este proyecto para el challenge.(Demo de funcionamiento en Video)
+* BACKEND - Release 1 - Este repositorio pertenece a este release y proyecto.
+* FRONTEND - Futuros releases - Ya comenzó el desarrollo, y mostramos los demos de funcionamiento en Video y screenshots más abajo
 
 Tenemos 3 roles: 
 - Nosotros, como proveedores del servicio.
 - Nuestro Usuario que necesita entregar la foto del DNI para identificarse, de ahora en adelante lo llamaremos "USUARIO".
-- El vendedor de criptomonedas o empresa que necesita conocer los nombres reales de nuestro "USUARIO".
+- El vendedor de criptomonedas o empresa que necesita conocer los nombres reales de nuestro "USUARIO".(u otro dato que se implementará más adelante)
 
 #### PASO 1: 
 "USUARIO" se registra con nosotros, y crea un PIN.
