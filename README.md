@@ -34,11 +34,11 @@ El proyecto total consta de 2 partes, para :
 Tenemos 3 roles: 
 - Nosotros, como proveedores del servicio.
 - Nuestro Usuario que necesita entregar la foto del DNI para identificarse, de ahora en adelante lo llamaremos "USUARIO".
-- El vendedor de criptomonedas o empresa que necesita conocer los nombres reales de nuestro "USUARIO".(u otro dato que se implementará más adelante)
+- El vendedor de criptomonedas o empresa que necesita conocer los nombres reales de nuestro "USUARIO" (u otro dato que se implementará más adelante).
 
 #### PASO 1: 
 "USUARIO" se registra con nosotros, y crea un PIN.
-Este PIN o Firma Digital que será usado para garantizar el permiso por cada acción posterior que el "USUARIO" 
+Este PIN o Firma Digital será usado para garantizar el permiso por cada acción posterior que el "USUARIO" 
 quiera realizar. Este PIN podrá ser reemplazado en futuros releases por una llave privada
 y el uso de una wallet de criptomonedas.
 
@@ -63,20 +63,22 @@ Es un id único e irrepetible de una sola vida, que será utilizado en una URL c
 "USUARIO" está compartiendo. Después de la primera llamada, el ID VIEW queda inválido y no devuelve datos.
 Ejemplo de llamada GET con params: `http://dominio.com/identities?idView=ID-UNICO-E-IRREPETIBLE-DE-UNA-SOLA-VIDA`
 
+
 #### PASO 5: 
 El individuo o empresa que necesita verificar los nombres de nuestro "USUARIO", podrá visualizar los datos una sola vez, y
 la autenticidad de los datos y el permiso del "USUARIO" serán garatizados por la inmutabilidad de la blockchain de DECRED. 
 
-
-
-
+--- La llamada a la vista, mostrará como respuesta sólo los datos compartidos y verificados, por ejemplo:
+``` 
+{ usersName: 'Juan', lastname:'Pérez' }
+```
 
 
 
 ## APIs
 
 Estas APIs son de tipo REST API, accesibles via protocolo HTTP, 
-IMPORTANTE: para todas las llamadas utilizar prefijo  `/api` 
+* IMPORTANTE: para todas las llamadas utilizar prefijo  `/api` 
 
 
 #### Endpoints
@@ -122,7 +124,7 @@ const getBinary = async (pathImage) => {
 
 
 
-### Configuration
+### Configuration Project
 
 * Este Proyecto utiliza MongoDB como persistencia.
 Para agregar nuevo en: ` /src/dao/factory/daoFactory/ `
@@ -136,12 +138,31 @@ DAO_TYPE = 'mongodb'
 
 CNX_STRING_MONGO = 'mongodb+srv://<user>:<password>@cluster0.jxcuw.mongodb.net/<databse>?retryWrites=true&w=majority'
 ```
-### DECRED TIMESTAMP APIs
+## DECRED TIMESTAMP APIs
 
-##### Timestamp network 
-=> 'testnet' or 'mainnet' 
+### Timestamp network 
+ * 'testnet' or 'mainnet' 
 
-##### Timestamp version API 
-=> 'v1' recommended - or 'v2'
+### Timestamp version API 
+ * 'v1' recommended - or 'v2'
 
+### dcrtime and Decred TIMESTAMP API FREE Service for timestamp Files 
+ https://timestamp.decred.org/
 
+### Credits for npm Dependencies package.json
+
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "crypto-js": "^4.0.0",
+    "dcrtimejs": "0.0.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.15",
+    "nodemon": "^2.0.6",
+    "tesseract.js": "^2.1.4"
+
+### LICENSE 
+
+This project is licensed under the ISC License. See the LICENSE file for details.
