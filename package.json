@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tdd": "nodemon --exec mocha --recursive --timeout 0 --reporter min"
+    "tdd": "nodemon --exec mocha --recursive --timeout 0 --reporter min",
+    "test": "nodemon --exec mocha --recursive --timeout 0 --reporter min"
   },
   "author": "",
   "license": "ISC",
