@@ -181,13 +181,13 @@ async function conectar(config) {
             useFindAndModify: false,
             useCreateIndex: true
         })
-        //console.log('...conectado a BD!')
+        console.log('...')
     } catch (error) {
         throw crearErrorDeBaseDeDatos(error.message)
     }
 }
 async function desconectar() {
-    //console.log('...desconectando BD')
+    console.log('.')
     await mongoose.connection.close()
 }
 
