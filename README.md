@@ -85,15 +85,19 @@ como un producto que comercializan impacta en ellos directamente, lo que hará q
 
 Entender la parte técnica de la tecnología Blockchain es uno de los retos más grandes para alguien que recién inicia en este rubro, ya sea programador o que no lo sea. Por lo tanto, mi primer objetivo fue desarrollar un proyecto que no esté completamente basado en blockchain, sino utilizar conceptos ya conocidos, por ejemplo, la de guardar información en una base de datos, utilizar un PIN como firma digital, etc, para posteriormente y progresivamente ir reemplazando estos conceptos y funcionalidades con tecnología blockchain. Por ejemplo, reemplazar el PIN o firma digital actualmente usado en el proyecto, por una clave privada. Asimismo, dejar de usar una base de datos centralizada y guardar la información encriptada y firmada con una clave privada, donde sólo la persona interesada pueda acceder a ellas. En cuanto a la forma de compartir datos, por ahora el proyecto sólo requiere del registro de la persona que desea compartir sus datos, en un futuro, cuando el proyecto obtenga mayor colaboración y crecimiento, será necesario que quien desea visualizar los datos que alguien le comparte, lo haga a través de una combinación entre el dato que desea leer y la llave privada que necesita para desencriptar estos datos. 
 
-### PRÓXIMAS MEJORAS A ESTE PROYECTO
-
-IMAGEN
-
 ### EJEMPLO DEMO DE FRONT END PARA ESTE PROYECTO
-#### Forma demostrativa de cómo interactuar con las APIs del proyecto.
+#### Tareas que realizamos automáticamente detrás del Frontend
+* Hasheo de Id de usuario,Firma Digital y Foto para guardado de foto.
+* Escaneo automático de foto y validación de datos en imagen. 
+* Hasheo de Id de usuario,Dato Verificado y Firma Digital para guardar en blockchain.
+* Entrega de datos verificados para ser visualizados una sola vez.
 
 ![Screenshot](./screenshots/modelo-sugerido.png)
 
+
+### PRÓXIMAS MEJORAS A ESTE PROYECTO
+
+Migrar progresivamente las funcionalidades de lo centralizado a lo descentralizado por completo.
 
 
 ## APIs
