@@ -92,7 +92,7 @@ IMAGEN
 ### EJEMPLO DEMO DE FRONT END PARA ESTE PROYECTO
 #### Forma demostrativa de cómo interactuar con las APIs del proyecto.
 
-![Screenshot](./screenshots/modelo-negocio-sugerido.png)
+![Screenshot](./screenshots/modelo-sugerido.png)
 
 
 
