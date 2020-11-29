@@ -13,6 +13,7 @@ const crearStamper = (timestamp, hasher) => {
             if (res.data.results[0] !== 0) {
                 throw crearErrorArgumentosInvalidos('stamp no exitoso, resultado fue', res.data.results[0])
             }
+            console.log('resultado de STAMP: ', res.data)
             return res.data.results[0]
         }
     }

@@ -13,17 +13,18 @@ Este proyecto es una idea propia original que fue pensada para solucionar un cas
 que viene obstaculizando el crecimiento del comercio de criptomonedas P2P.
 
 ### PROBLEMA A SOLUCIONAR E INSPIRACIÓN:
-Mi nombre es Abel, tengo alrededor de 3 años de experiencia en el comercio de criptomonedas P2P 
-y miles de intercambios de bitcoin con usuarios de diferentes plataformas y países, uno de ellos es Localbitcoins.
-Desde que empecé con las criptomonedas hasta el día de hoy, Localbitcoins y otras plataformas han mejorado 
-en sus sistemas de verificación de identidad, sin embargo diariamente sigue existiendo desconfianza entre 
-los usuarios que operan en estas plataformas, por lo cual, es muy común que algún vendedor te solicite la 
-foto de tu dni u otra identificación. Es bastante claro que quien entrega la foto de su Dni corre un alto riesgo 
+Mi nombre es Abel, empecé a estudiar programación hace casi año y medio. Por otra parte, en cuanto a conocimientos de blockchain y criptomonedas,
+tengo alrededor de 3 años de experiencia en el comercio P2P de criptomonedas 
+y miles de intercambios de bitcoin con usuarios de diferentes plataformas y países, uno de ellos, Localbitcoins.
+Desde que empecé con las criptomonedas hasta el día de hoy, Localbitcoins y otras plataformas han ido mejorando 
+sus sistemas de verificación de identidad, sin embargo diariamente sigue existiendo desconfianza entre 
+los usuarios que operan en estas plataformas, así que es muy común que algún vendedor te solicite una
+foto de tu dni para identificarte. Es bastante claro que quien entrega la foto de su Dni corre un alto riesgo 
 en la seguridad de su privacidad, posible filtración de datos, robo de identidad, etc. 
-Por otra parte existe un problema para el vendedor que necesita pedir la foto a la otra persona, ya que, en caso el comprador no quiera entregar la foto, también implica una posible cancelación 
+Por otra parte para el vendedor que necesita pedir la foto a la otra persona, es un problema, ya que, en caso el comprador no quiera entregar la foto, también implica una posible cancelación 
 de la venta y posible mala calificación en la reputación del mismo, asimismo, si no la solicita también corre diferentes riesgos como
 participar sin conocimiento en un sistema de lavado de dinero, narcotráfico, triangulaciones, hackeo de cuentas bancarias y más. Tengo una
-muy mala experiencia con éste último, pero no termina ahí... gracias a esa experiencia, nació este proyecto!!
+muy mala experiencia con éste último, pero gracias a esa experiencia... nació este proyecto!!
 
 
 ### SOLUCIÓN:
@@ -72,6 +73,26 @@ la autenticidad de los datos y el permiso del "USUARIO" serán garatizados por l
 ``` 
 { usersName: 'Juan', lastname:'Pérez' }
 ```
+
+### IMPACTO DEL PROYECTO EN LA COMUNIDAD CRIPTO
+
+A diario miles de comerciantes de criptomonedas que realizan en intercambios en distintas plataformas enfrentan el problema que este proyecto intenta solucionar. Proveer para ellos una opción de uso diario, en donde se pueda garantizar la identidad de una persona, y que además
+decirles que la solución la provee una red blockchain como la de DECRED, sería una razón importante para dejar de ver a las criptomonedas únicamente como un bien de valor intercambiable, en cambio, los que diariamente comercian con ellos, podrán apreciar el impacto real de
+como un producto que comercializan impacta en ellos directamente, lo que hará que conozcan de a pocos los aspectos técnicos que envuelven a esta tecnología y en especial poner foco a DECRED, quien es finalmente quien facilita esta solución.
+ 
+
+### OBJETIVOS INICIALES DEL PROYECTO
+
+Entender la parte técnica de la tecnología Blockchain es uno de los retos más grandes para alguien que recién inicia en este rubro, ya sea programador o que no lo sea. Por lo tanto, mi primer objetivo fue desarrollar un proyecto que no esté completamente basado en blockchain, sino utilizar conceptos ya conocidos, por ejemplo, la de guardar información en una base de datos, utilizar un PIN como firma digital, etc, para posteriormente y progresivamente ir reemplazando estos conceptos y funcionalidades con tecnología blockchain. Por ejemplo, reemplazar el PIN o firma digital actualmente usado en el proyecto, por una clave privada. Asimismo, dejar de usar una base de datos centralizada y guardar la información encriptada y firmada con una clave privada, donde sólo la persona interesada pueda acceder a ellas. En cuanto a la forma de compartir datos, por ahora el proyecto sólo requiere del registro de la persona que desea compartir sus datos, en un futuro, cuando el proyecto obtenga mayor colaboración y crecimiento, será necesario que quien desea visualizar los datos que alguien le comparte, lo haga a través de una combinación entre el dato que desea leer y la llave privada que necesita para desencriptar estos datos. 
+
+### PRÓXIMAS MEJORAS A ESTE PROYECTO
+
+IMAGEN
+
+### EJEMPLO DEMO DE FRONT END PARA ESTE PROYECTO
+#### Forma demostrativa de cómo interactuar con las APIs del proyecto.
+
+![Screenshot](./screenshots/modelo-negocio-sugerido.png)
 
 
 
@@ -137,6 +158,7 @@ npm run tdd
 
 * Este Proyecto utiliza MongoDB como persistencia.
 Para agregar nuevo en: ` /src/dao/factory/daoFactory/ `
+Futuros releases: Reemplazar la base de datos centralizada, por una descentralizada como DECRED.
 
 * .env File:
 
@@ -144,15 +166,13 @@ Para agregar nuevo en: ` /src/dao/factory/daoFactory/ `
 TIMESTAMP_NETWORK = 'testnet' 
 TIMESTAMP_VERSION_API = 'v1'
 DAO_TYPE = 'mongodb'
-
 CNX_STRING_MONGO = 'mongodb+srv://<user>:<password>@cluster0.jxcuw.mongodb.net/<databse>?retryWrites=true&w=majority'
 ```
 
 #### DECRED TIMESTAMP APIs
 
 ### Timestamp network 
- * 'testnet' or 'mainnet' 
-
+ *  'mainnet' or 'testnet' by default
 ### Timestamp version API 
  * 'v1' recommended - or 'v2'
 
@@ -172,6 +192,11 @@ CNX_STRING_MONGO = 'mongodb+srv://<user>:<password>@cluster0.jxcuw.mongodb.net/<
     "mongoose": "^5.10.15",
     "nodemon": "^2.0.6",
     "tesseract.js": "^2.1.4"
+
+* Credits for Home Vector Design
+<a href="https://stories.freepik.com/people">Illustration by Freepik Stories</a>
+* Credits for Avatars Design
+<a href='https://www.freepik.es/vectores/personas'>Vector de Personas creado por studiogstock - www.freepik.es</a>
 
 ### LICENSE 
 
