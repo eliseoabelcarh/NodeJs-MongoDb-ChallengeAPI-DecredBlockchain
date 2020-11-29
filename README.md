@@ -9,12 +9,11 @@ Proyecto propio desarrollado para Blockchain Learning Challenge - Decred / Talen
 
 ## ACERCA DE ESTE PROYECTO
 
-Este proyecto es una idea propia original que fue pensada para solucionar un caso de uso específico 
+Este proyecto es una idea original que fue pensada para solucionar un caso de uso específico 
 que viene obstaculizando el crecimiento del comercio de criptomonedas P2P.
 
 ### PROBLEMA A SOLUCIONAR E INSPIRACIÓN:
-Mi nombre es Abel, empecé a estudiar programación hace casi año y medio. Por otra parte, en cuanto a conocimientos de blockchain y criptomonedas,
-tengo alrededor de 3 años de experiencia en el comercio P2P de criptomonedas 
+Mi nombre es Abel, empecé a estudiar programación hace casi año y medio. Por otra parte, tengo 3 años de experiencia en el comercio P2P de criptomonedas 
 y miles de intercambios de bitcoin con usuarios de diferentes plataformas y países, uno de ellos, Localbitcoins.
 Desde que empecé con las criptomonedas hasta el día de hoy, Localbitcoins y otras plataformas han ido mejorando 
 sus sistemas de verificación de identidad, sin embargo diariamente sigue existiendo desconfianza entre 
@@ -30,7 +29,7 @@ muy mala experiencia con éste último, pero gracias a esa experiencia... nació
 ### SOLUCIÓN:
 El proyecto total consta de 2 partes, para :
 * BACKEND - Release 1 - Este repositorio pertenece a este release y proyecto.
-* FRONTEND - Futuros releases - Ya comenzó el desarrollo, y mostramos los demos de funcionamiento en Video y screenshots más abajo
+* FRONTEND - Futuros releases - Ya comenzó el desarrollo, y mostramos los demos de funcionamiento en screenshots más abajo
 
 Tenemos 3 roles: 
 - Nosotros, como proveedores del servicio.
@@ -76,17 +75,16 @@ la autenticidad de los datos y el permiso del "USUARIO" serán garatizados por l
 
 ### IMPACTO DEL PROYECTO EN LA COMUNIDAD CRIPTO
 
-A diario miles de comerciantes de criptomonedas que realizan en intercambios en distintas plataformas enfrentan el problema que este proyecto intenta solucionar. Proveer para ellos una opción de uso diario, en donde se pueda garantizar la identidad de una persona, y que además
-decirles que la solución la provee una red blockchain como la de DECRED, sería una razón importante para dejar de ver a las criptomonedas únicamente como un bien de valor intercambiable, en cambio, los que diariamente comercian con ellos, podrán apreciar el impacto real de
-como un producto que comercializan impacta en ellos directamente, lo que hará que conozcan de a pocos los aspectos técnicos que envuelven a esta tecnología y en especial poner foco a DECRED, quien es finalmente quien facilita esta solución.
+A diario miles de comerciantes de criptomonedas que realizan intercambios en distintas plataformas enfrentan el problema que este proyecto intenta solucionar. Proveer para ellos una opción de uso diario, en donde se pueda garantizar la identidad de una persona utlizando la red blockchain de DECRED, sería una razón importante para dejar de ver a las criptomonedas únicamente como un bien de valor intercambiable, en cambio, los que diariamente comercian con ellos, podrán apreciar el impacto real de
+como un producto que comercializan impacta en ellos directamente y de otras formas diferentes a las habituales, lo que hará que conozcan de a pocos los aspectos técnicos que envuelven a esta tecnología y en especial poner foco a DECRED, quien es finalmente quien facilita esta solución.
  
 
 ### OBJETIVOS INICIALES DEL PROYECTO
 
-Entender la parte técnica de la tecnología Blockchain es uno de los retos más grandes para alguien que recién inicia en este rubro, ya sea programador o que no lo sea. Por lo tanto, mi primer objetivo fue desarrollar un proyecto que no esté completamente basado en blockchain, sino utilizar conceptos ya conocidos, por ejemplo, la de guardar información en una base de datos, utilizar un PIN como firma digital, etc, para posteriormente y progresivamente ir reemplazando estos conceptos y funcionalidades con tecnología blockchain. Por ejemplo, reemplazar el PIN o firma digital actualmente usado en el proyecto, por una clave privada. Asimismo, dejar de usar una base de datos centralizada y guardar la información encriptada y firmada con una clave privada, donde sólo la persona interesada pueda acceder a ellas. En cuanto a la forma de compartir datos, por ahora el proyecto sólo requiere del registro de la persona que desea compartir sus datos, en un futuro, cuando el proyecto obtenga mayor colaboración y crecimiento, será necesario que quien desea visualizar los datos que alguien le comparte, lo haga a través de una combinación entre el dato que desea leer y la llave privada que necesita para desencriptar estos datos. 
+Entender la parte técnica de la tecnología Blockchain es uno de los retos más grandes para alguien que recién inicia en este rubro, ya sea programador o que no lo sea. Por lo tanto, mi primer objetivo fue desarrollar un proyecto que no esté completamente basado en blockchain, sino utilizar conceptos ya conocidos, por ejemplo, la de guardar información en una base de datos, utilizar un PIN como firma digital, etc, para posteriormente y progresivamente ir reemplazando estos conceptos y funcionalidades con tecnología blockchain. Por ejemplo, reemplazar el PIN o firma digital actualmente usado en el proyecto, por una clave privada. Asimismo, dejar de usar una base de datos centralizada y guardar la información encriptada y firmada con una clave privada, donde sólo la persona interesada pueda acceder a ellas. En cuanto a la forma de compartir datos, por ahora el proyecto sólo requiere del registro de la persona que desea compartir sus datos, en un futuro, será necesario que quien desea visualizar los datos que alguien le comparte, lo haga a través de una combinación entre el dato que desea leer y la llave privada que necesita para desencriptar esos datos. 
 
 ### EJEMPLO DEMO DE FRONT END PARA ESTE PROYECTO
-#### Tareas que realizamos automáticamente detrás del Frontend
+#### Tareas que realizamos automáticamente en el Backend
 * Hasheo de Id de usuario,Firma Digital y Foto para guardado de foto.
 * Escaneo automático de foto y validación de datos en imagen. 
 * Hasheo de Id de usuario,Dato Verificado y Firma Digital para guardar en blockchain.
@@ -197,10 +195,15 @@ CNX_STRING_MONGO = 'mongodb+srv://<user>:<password>@cluster0.jxcuw.mongodb.net/<
     "nodemon": "^2.0.6",
     "tesseract.js": "^2.1.4"
 
-* Credits for Home Vector Design
+### Credits for images and designs
+* Home Vector Design
 <a href="https://stories.freepik.com/people">Illustration by Freepik Stories</a>
 * Credits for Avatars Design
 <a href='https://www.freepik.es/vectores/personas'>Vector de Personas creado por studiogstock - www.freepik.es</a>
+* Mockup Mobile
+<a href='https://www.freepik.es/vectores/tecnologia'>Vector de Tecnología creado por freepik - www.freepik.es</a>
+* Glasses and beard for avatar
+<a href='https://www.freepik.es/vectores/hombre'>Vector de Hombre creado por freepik - www.freepik.es</a>
 
 ### LICENSE 
 
