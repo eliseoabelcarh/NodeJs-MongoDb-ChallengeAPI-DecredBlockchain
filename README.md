@@ -26,6 +26,7 @@ de cuentas bancarias y más.
 El proyecto total consta de 2 partes, para :
 * BACKEND - APIs Release 1 - Entregable para Challenge DECRED
 * FRONTEND - Futuros releases - Desarrollo ya comenzado, screenshots reales más abajo.
+https://github.com/eliseoabelcarh/vue-quasar-decred-blockchain-front-v1
 
 * 3 roles: 
 - Nosotros, como proveedores del servicio.
