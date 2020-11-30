@@ -1,11 +1,6 @@
-/* const forHash = {
-0: userId,
-1: signature,
-2: data
-} */
 
+// modelo forHash es { userId, signature,2: data} 
 const crearModeloHashCombined = (forHash, hasher) => {
-
 
     const userId = forHash[0]
     const signature = forHash[1]

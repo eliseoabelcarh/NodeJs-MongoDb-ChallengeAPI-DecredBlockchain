@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 
 const userSchemaColection = 'users'
 
+// schema modelo para base de datos de usuarios
 const UserSchema = new Schema({
     id: Number,
     name: String,

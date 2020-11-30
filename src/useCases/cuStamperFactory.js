@@ -11,6 +11,9 @@ const cuStamperFactory = (function () {
     function create(searcher, updater, stamper) {
 
         return {
+            // se utiliza para guardar diferentes datos en la blockchain
+            // por ahora sólo la carga de foto del documento de identidad
+            // es manejado acá
             stamp: async (req) => {
                 let { id, dataType, data, signature } = await getRequestModel(req)
                 const signatureDB = await searcher.searchData({ id, type: 'signature' })

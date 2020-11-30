@@ -8,6 +8,9 @@ const cuVerificationFactory = (function () {
     function create(searcher, interpreter, stamper, updater) {
 
         return {
+            // se utiliza para manejar las solicitudes de usuario para verificar sus datos
+            // se hace una lectura a la foto del dni para comparar datos
+            // si coinciden guardamos los datos en la blockchain
             apply: async (req) => {
                 const { id, type, signature, verifiedType } = getApplyVerificationModel(req)
                 const data = await searcher.searchData({ id, type })//name or lastname only

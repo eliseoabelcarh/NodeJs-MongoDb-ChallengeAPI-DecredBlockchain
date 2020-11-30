@@ -6,6 +6,7 @@ const fs = require('fs')
 
 
 const crearImageTextReader = () => {
+    //muestra porcentaje de lectura de imagen
     const logger = {
         logger: m => {
             let num = m.progress
@@ -15,6 +16,7 @@ const crearImageTextReader = () => {
     }
 
     return {
+        //función que obtiene texto de una imagen
         readTextFromImage: async (pathImage) => {
             try {
                 const worker = createWorker(logger)

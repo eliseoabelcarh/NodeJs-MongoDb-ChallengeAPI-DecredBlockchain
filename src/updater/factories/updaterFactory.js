@@ -16,6 +16,9 @@ const daoViews = daoFactory.getDaoViews()
 
 const updaterFactory = {
 
+    //de acuerdo al tipo de dato, devuelve
+    // el updater correspondiente que irá a actualizar
+    //a la base de datos el dato respectivo
     getInstance: function (type) {
 
         if (type === 'newUser') {

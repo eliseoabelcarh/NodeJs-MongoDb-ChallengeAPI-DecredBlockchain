@@ -1,6 +1,6 @@
 const axios = require('axios').default
 
-
+//llamada a las APIs y rutas de proyecto
 function crearClienteRest(port) {
     return {
         registrar: async (user) => {
@@ -25,10 +25,13 @@ function crearClienteRest(port) {
     }
 }
 
+//urlBase de API con prefijo /api
 function crearURLBase(port) {
     return `http://localhost:${port}/api`
 }
 
+// envío de request
+// dependencia con axios
 async function sendRequest(req) {
     try {
         const result = await axios(req)

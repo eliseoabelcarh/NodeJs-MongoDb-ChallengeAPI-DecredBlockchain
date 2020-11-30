@@ -16,7 +16,9 @@ const daoViews = daoFactory.getDaoViews()
 
 
 const storerFactory = {
-
+    //de acuerdo al tipo de dato, devuelve
+    // el guardador correspondiente que irá a guardar
+    //a la base de datos el dato respectivo
     getInstance: function (type) {
 
         if (type === 'newUser') {

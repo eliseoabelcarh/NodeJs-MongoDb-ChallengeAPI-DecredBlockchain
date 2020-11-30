@@ -3,10 +3,13 @@ const { crearModeloHashCombined } = require('../models/modeloHashCombined')
 
 const crearStamper = (timestamp, hasher) => {
 
-    // const forHash = {0: userId, 1: signature, 2: data }
+    // MODELO forHash = {0: userId, 1: signature, 2: data }
 
     return {
 
+        //crea el modelo combinado con los datos originales
+        // del modelo FORHASH
+        //para estamparlos en la blockchain
         stamp: async (forHash) => {
             const { id, combined } = crearModeloHashCombined(forHash, hasher)
             const res = await timestamp.timestampOne({ id, digest: combined })

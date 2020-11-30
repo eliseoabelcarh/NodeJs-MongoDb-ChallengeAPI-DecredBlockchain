@@ -1,6 +1,7 @@
 const daoFactory = require('../../src/dao/factory/daoFactory');
 const useCasesFactory = require('../../src/useCases/useCasesFactory')
 const fs = require('fs').promises
+const fss = require('fs')
 const assert = require('assert')
 
 
@@ -53,7 +54,10 @@ describe('TEST PARA USE CASE STAMPER', () => {
     afterEach(async () => {
         await dao.cleanAll()
     })
+    after(() => {
+        fss.rmdirSync('./src/uploads/', { recursive: true })
 
+    })
     describe('recibimos un request de servidor con foto dni en body', () => {
 
         it('stampamos en blockchain y reiniciamos valores en bd', async () => {
@@ -86,6 +90,9 @@ describe('TEST PARA USE CASE VERIFICATION', () => {
     })
     afterEach(async () => {
         await dao.cleanAll()
+    })
+    after(() => {
+        fss.rmdirSync('./src/uploads/', { recursive: true })
     })
 
     describe('recibimos un request de servidor para stampear en blockchain', () => {

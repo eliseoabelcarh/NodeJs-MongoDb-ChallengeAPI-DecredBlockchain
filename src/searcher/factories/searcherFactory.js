@@ -17,6 +17,9 @@ const daoViews = daoFactory.getDaoViews()
 
 const searcherFactory = {
 
+    //de acuerdo al tipo de dato, devuelve
+    // el buscador correspondiente que irá a buscar
+    //a la base de datos el dato respectivo
     getInstance: function (type) {
 
         if (type === 'usersName') {

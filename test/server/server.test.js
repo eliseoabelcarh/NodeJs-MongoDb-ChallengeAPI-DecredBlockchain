@@ -3,6 +3,7 @@ const { crearClienteRest } = require('../../src/clienteRest')
 const daoFactory = require('../../src/dao/factory/daoFactory')
 const { createServer } = require('../../src/server/server')
 const fs = require('fs').promises
+const fss = require('fs')
 
 const pathImage = './src/assets/dniPhoto.jpg'
 
@@ -39,7 +40,10 @@ describe('TEST PARA SERVER Y USE CASES', async () => {
         await dao.cleanAll()
     })
 
+    after(() => {
+        fss.rmdirSync('./src/uploads/', { recursive: true })
 
+    })
     describe('first testing to GET de ruta Api', async () => {
         it('devuelve status 200 y mensaje okay', async () => {
             const response = await clienteRest.testApiRoute()

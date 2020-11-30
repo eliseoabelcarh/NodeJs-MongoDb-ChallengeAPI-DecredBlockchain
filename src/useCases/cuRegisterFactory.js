@@ -8,6 +8,7 @@ const cuRegisterFactory = (function () {
     function create(storer) {
 
         return {
+            // se utiliza para dar de alta un usuario nuevo
             register: async (req) => {
                 const userModel = getUserModelFromRequest(req)
                 return await storer.storeData({ id: null, type: 'newUser', data: userModel })

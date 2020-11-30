@@ -1,5 +1,5 @@
 
-
+//tipo de encriptación
 const typeOfHash = 'sha256'
 
 const hasherConfig = {

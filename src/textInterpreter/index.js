@@ -5,6 +5,7 @@ const crearTextInterpreter = () => {
 
     return {
 
+        //según tipo de dato obtiene los datos de una cadena de texto
         readPath: async ({ type, path }) => {
 
             let interpreter = textInterpreterFactory.getInterpreter(type)

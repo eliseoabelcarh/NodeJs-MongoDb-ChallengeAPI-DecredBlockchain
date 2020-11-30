@@ -10,6 +10,9 @@ const cuViewerFactory = (function () {
     function create(searcher, updater) {
 
         return {
+            // se utiliza para manejar el idview recibido y poder devolver
+            // un json con los datos verificados 
+            // invalidando el idview una vez utilizado
             getView: async (req) => {
                 const { idView } = getViewRequestModel(req)
                 const { id, valid, view } = await searcher.searchData({ id: idView, type: 'view' })

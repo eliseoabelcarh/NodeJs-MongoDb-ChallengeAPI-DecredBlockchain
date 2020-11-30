@@ -11,6 +11,8 @@ const timestampFactory = (function () {
         const network = timestampConfig.getNetworkPort()
         const versionAPI = timestampConfig.getVersionAPI()
 
+        //se usa las APIs de timestamp Decred para verificar o enviar
+        // datos a la blockchain uno por vez
         return {
             timestampOne: async ({ id, digest }) => {
                 const url = `${baseURL}:${network}/${versionAPI}/timestamp/`

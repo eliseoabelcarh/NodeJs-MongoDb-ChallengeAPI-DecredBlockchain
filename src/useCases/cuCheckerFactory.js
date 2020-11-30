@@ -9,6 +9,9 @@ const cuCheckerFactory = (function () {
     function create(checker, hasher, searcher, storer) {
 
         return {
+            //se utiliza para recibir la solicitud del usuario con los datos
+            // que desea compartir, se hace la verificaciones correspondientes 
+            // para poder generar un ID VIEW que será utilizado en un link share
             check: async (req) => {
                 const { id, signature, types } = await getCheckRequestModel(req, searcher)
                 const signatureDB = await searcher.searchData({ id, type: 'signature' })

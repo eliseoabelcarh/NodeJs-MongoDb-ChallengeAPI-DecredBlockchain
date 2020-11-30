@@ -8,53 +8,50 @@ Proyecto propio desarrollado para Blockchain Learning Challenge - Decred / Talen
 
 ## ACERCA DE ESTE PROYECTO
 
-Este proyecto es una idea original que fue pensada para solucionar un caso de uso específico 
+Este proyecto es una idea original pensada para solucionar un caso de uso específico 
 que viene obstaculizando el crecimiento del comercio de criptomonedas P2P.
 
-### PROBLEMA A SOLUCIONAR E INSPIRACIÓN:
-Mi nombre es Abel, empecé a estudiar programación hace casi año y medio. Por otra parte, tengo 3 años de experiencia en el comercio P2P de criptomonedas 
-y miles de intercambios de bitcoin con usuarios de diferentes plataformas y países, uno de ellos, Localbitcoins.
-Desde que empecé con las criptomonedas hasta el día de hoy, Localbitcoins y otras plataformas han ido mejorando 
-sus sistemas de verificación de identidad, sin embargo diariamente sigue existiendo desconfianza entre 
-los usuarios que operan en estas plataformas, así que es muy común que algún vendedor te solicite una
-foto de tu dni para identificarte. Es bastante claro que quien entrega la foto de su Dni corre un alto riesgo 
-en la seguridad de su privacidad, posible filtración de datos, robo de identidad, etc. 
-Por otra parte para el vendedor que necesita pedir la foto a la otra persona, es un problema, ya que, en caso el comprador no quiera entregar la foto, también implica una posible cancelación 
-de la venta y posible mala calificación en la reputación del mismo, asimismo, si no la solicita también corre diferentes riesgos como
-participar sin conocimiento en un sistema de lavado de dinero, narcotráfico, triangulaciones, hackeo de cuentas bancarias y más. Tengo una
-muy mala experiencia con éste último, pero gracias a esa experiencia... nació este proyecto!!
+### PROBLEMA A SOLUCIONAR:
+
+A diario miles de compradores de criptomonedas deben enviar la foto del documento de identidad para poder
+verificar su identidad a un vendedor que no conocen, esto implica un riesgo en la seguridad de los datos,
+violación a la privacidad, posibles robos de identidad y más. En caso de negarse, la operación puede cancelarse, 
+y según el vendedor podrían hasta recibir una calificación negativa en sus reputaciones.
+Es así que a fin de no perder la venta, los vendedores también deciden no pedir identificación, lo que genera un nuevo riesgo para ellos, ya que si no 
+identifican a sus compradores, podrían sin saberlo participar de lavado de activos, estafas, triangulaciones, hackeo
+de cuentas bancarias y más.
 
 
 ### SOLUCIÓN:
 El proyecto total consta de 2 partes, para :
-* BACKEND - Release 1 - Este repositorio pertenece a este release y proyecto.
-* FRONTEND - Futuros releases - Ya comenzó el desarrollo, y mostramos los demos de funcionamiento en screenshots más abajo
+* BACKEND - APIs Release 1 - Entregable para Challenge DECRED
+* FRONTEND - Futuros releases - Desarrollo ya comenzado, screenshots reales más abajo.
 
-Tenemos 3 roles: 
+* 3 roles: 
 - Nosotros, como proveedores del servicio.
-- Nuestro Usuario que necesita entregar la foto del DNI para identificarse, de ahora en adelante lo llamaremos "USUARIO".
+- El Usuario que necesita entregar la foto del DNI para identificarse, de ahora en adelante lo llamaremos "USUARIO".
 - El vendedor de criptomonedas o empresa que necesita conocer los nombres reales de nuestro "USUARIO" (u otro dato que se implementará más adelante).
 
-#### PASO 1: 
+#### PASO 0: 
 "USUARIO" se registra con nosotros, y crea un PIN.
 Este PIN o Firma Digital será usado para garantizar el permiso por cada acción posterior que el "USUARIO" 
 quiera realizar. Este PIN podrá ser reemplazado en futuros releases por una llave privada
 y el uso de una wallet de criptomonedas.
 
-#### PASO 2:
+#### PASO 1:
 "USUARIO" carga la foto del DNI en nuestros servidores firmando el envío con su PIN creado.
-Por nuestra parte, nosotros creamos un registro único e inmutable de esa foto en la blockchain de DECRED
-utilizando las APIs de timestamp de DECRED, garantizando que no habrá alteración de esa foto.
+Por nuestra parte, creamos un registro único e inmutable de esta foto en la blockchain de DECRED
+utilizando las APIs de timestamp de DECRED, garantizando que no habrá alteración del archivo.
 
-#### PASO 3: 
+#### PASO 2: 
 "USUARIO" solicita cuáles datos desea que nosotros verifiquemos. Por ejemplo elegiremos que sea el Nombre.
-Nosotros recibimos la solicitud, la validamos y un algoritmo especial lee el nombre de la foto del DNI, y lo compara
+Al recibir la solicitud, validamos el PIN o firma y un algoritmo lee el nombre de la foto del DNI y lo compara
 con el nombre registrado. En caso coincidan, toma el Nombre y lo registra como inalterable en la blockchain de DECRED.
 
-#### PASO 4:
+#### PASO 3:
 "USUARIO" elige qué datos de los verificados desea compartir, por ejemplo, asumamos que elige su NOMBRE y su APELLIDO.
 El "USUARIO" firma la solicitud por cada dato, y por cada dato solicitado nosotros realizamos la verificación de su existencia en 
-la blockchain de DECRED. Esto garantiza que los datos no han sido cambiados y que la solicitud la realizó el mismo "USUARIO".
+la blockchain de DECRED. Esto garantiza que los datos no han sido cambiados y que el consentimiento fue firmado por el "USUARIO".
 Este proceso genera un ID VIEW. 
 
 --- Características del ID VIEW: 
@@ -63,9 +60,9 @@ Es un id único e irrepetible de una sola vida, que será utilizado en una URL c
 Ejemplo de llamada GET con params: `http://dominio.com/identities?idView=ID-UNICO-E-IRREPETIBLE-DE-UNA-SOLA-VIDA`
 
 
-#### PASO 5: 
+#### PASO FINAL: 
 El individuo o empresa que necesita verificar los nombres de nuestro "USUARIO", podrá visualizar los datos una sola vez, y
-la autenticidad de los datos y el permiso del "USUARIO" serán garatizados por la inmutabilidad de la blockchain de DECRED. 
+la autenticidad de los datos y el consentimiento del "USUARIO" serán garatizados por la inmutabilidad de la blockchain de DECRED. 
 
 --- La llamada a la vista, mostrará como respuesta sólo los datos compartidos y verificados, por ejemplo:
 ``` 
@@ -78,9 +75,9 @@ A diario miles de comerciantes de criptomonedas que realizan intercambios en dis
 como un producto que comercializan impacta en ellos directamente y de otras formas diferentes a las habituales, lo que hará que conozcan de a pocos los aspectos técnicos que envuelven a esta tecnología y en especial poner foco a DECRED, quien es finalmente quien facilita esta solución.
  
 
-### OBJETIVOS INICIALES DEL PROYECTO
+### OBJETIVOS INICIALES Y ESPECÍFICOS DE ESTE PROYECTO
 
-Entender la parte técnica de la tecnología Blockchain es uno de los retos más grandes para alguien que recién inicia en este rubro, ya sea programador o que no lo sea. Por lo tanto, mi primer objetivo fue desarrollar un proyecto que no esté completamente basado en blockchain, sino utilizar conceptos ya conocidos, por ejemplo, la de guardar información en una base de datos, utilizar un PIN como firma digital, etc, para posteriormente y progresivamente ir reemplazando estos conceptos y funcionalidades con tecnología blockchain. Por ejemplo, reemplazar el PIN o firma digital actualmente usado en el proyecto, por una clave privada. Asimismo, dejar de usar una base de datos centralizada y guardar la información encriptada y firmada con una clave privada, donde sólo la persona interesada pueda acceder a ellas. En cuanto a la forma de compartir datos, por ahora el proyecto sólo requiere del registro de la persona que desea compartir sus datos, en un futuro, será necesario que quien desea visualizar los datos que alguien le comparte, lo haga a través de una combinación entre el dato que desea leer y la llave privada que necesita para desencriptar esos datos. 
+Entender la parte técnica de la tecnología Blockchain es uno de los retos más grandes para alguien que recién inicia en este rubro, ya sea programador o que no lo sea. Por lo tanto, mi primer objetivo fue desarrollar un proyecto que no esté completamente basado en blockchain, sino utilizar conceptos ya conocidos, por ejemplo, la de guardar información en una base de datos, utilizar un PIN como firma digital, etc, para posteriormente y progresivamente ir reemplazando estos conceptos y funcionalidades con tecnología blockchain. Por ejemplo, reemplazar el PIN o firma digital actualmente usado en el proyecto, por una clave privada. Asimismo, dejar de usar una base de datos centralizada y guardar la información encriptada y firmada con una clave privada, donde sólo la persona interesada pueda acceder a ellas y en caso quiera compartir datos, encriptar los datos con la llave pública de la otra persona. De esta forma será necesario que quien desea visualizar los datos que alguien le comparte, lo haga a través de una combinación entre el dato que desea leer y la llave privada que necesita para desencriptar esos datos. 
 
 ### EJEMPLO DEMO DE FRONT END PARA ESTE PROYECTO
 #### Tareas que realizamos automáticamente en el Backend
@@ -94,7 +91,7 @@ Entender la parte técnica de la tecnología Blockchain es uno de los retos más
 
 ### PRÓXIMAS MEJORAS A ESTE PROYECTO
 
-Migrar progresivamente las funcionalidades de lo centralizado a lo descentralizado por completo.
+Continuar con el desarrollo de la interfaz de usuario y migrar progresivamente las funcionalidades de lo centralizado a lo descentralizado por completo.
 
 
 ## APIs
@@ -108,7 +105,7 @@ Estas APIs son de tipo REST API, accesibles via protocolo HTTP,
 | Tipo |   Ruta              | Descripción                | Datos                                              |
 | ---- |-------------------- | -------------------------- | -------------------------------------------------- |
 | POST | `/users`            | Alta de usuarios           | Ejm.Body: {name,lastname,email,password,signature} |
-| POST | `/photos/:id`       | Cargar Foto DNI            | Ejm.Body: {dataType,data(base64Encoded),signature} |
+| POST | `/photos/:id`       | Cargar Foto DNI            | Ejm.Body: {dataType,data,signature} |
 | POST | `/verifications/:id`| Verificación de Dato       | Ejm.Body: {dataType,signature}                     |
 | POST | `/shares/:id`       | Datos a compartir          | Ejm.Body: {signature,types}                        |
 | GET  | `/identities`       | Vista de datos compartidos | Ejm.Query: ?viewId=UNICO-ID                        |
@@ -159,7 +156,7 @@ npm run tdd
 
 * Este Proyecto utiliza MongoDB como persistencia.
 Para agregar nuevo en: ` /src/dao/factory/daoFactory/ `
-Futuros releases: Reemplazar la base de datos centralizada, por una descentralizada como DECRED.
+Considerar a Futuros releases:La base de datos centralizada será reemplazada totalmente por un sistema descentralizado.
 
 * .env File:
 
@@ -194,7 +191,7 @@ CNX_STRING_MONGO = 'mongodb+srv://<user>:<password>@cluster0.jxcuw.mongodb.net/<
     "nodemon": "^2.0.6",
     "tesseract.js": "^2.1.4"
 
-### Credits for images and designs
+### Credits for images
 * Home Vector Design
 <a href="https://stories.freepik.com/people">Illustration by Freepik Stories</a>
 * Credits for Avatars Design
@@ -203,6 +200,11 @@ CNX_STRING_MONGO = 'mongodb+srv://<user>:<password>@cluster0.jxcuw.mongodb.net/<
 <a href='https://www.freepik.es/vectores/tecnologia'>Vector de Tecnología creado por freepik - www.freepik.es</a>
 * Glasses and beard for avatar
 <a href='https://www.freepik.es/vectores/hombre'>Vector de Hombre creado por freepik - www.freepik.es</a>
+* hello guy for video demo
+<a href="https://stories.freepik.com/web">Illustration by Freepik Stories</a> 
+* people for video demo
+<a href="https://storyset.com/people">Illustration by Freepik Stories</a> 
+
 
 ### LICENSE 
 
