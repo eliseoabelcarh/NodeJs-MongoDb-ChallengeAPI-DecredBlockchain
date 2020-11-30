@@ -92,7 +92,7 @@ Entender la parte técnica de la tecnología Blockchain es uno de los retos más
 
 ### PRÓXIMAS MEJORAS A ESTE PROYECTO
 
-Continuar con el desarrollo de la interfaz de usuario y migrar progresivamente las funcionalidades de lo centralizado a lo descentralizado por completo.
+Continuar con el desarrollo de la interfaz de usuario y en un futuro migrar progresivamente las funcionalidades de lo centralizado a lo descentralizado por completo.
 
 
 ## APIs
