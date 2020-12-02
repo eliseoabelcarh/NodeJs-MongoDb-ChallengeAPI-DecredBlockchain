@@ -1,4 +1,7 @@
 
+## README English Version
+<a href="https://github.com/eliseoabelcarh/NodeJs-MongoDb-ChallengeAPI-DecredBlockchain/blob/master/README.en.md">Click here</a>
+
 
 ## OVERVIEW
 
@@ -58,7 +61,7 @@ Este proceso genera un ID VIEW.
 --- Características del ID VIEW: 
 Es un id único e irrepetible de una sola vida, que será utilizado en una URL como llamada a nuestras APIs para obtener los datos que
 "USUARIO" está compartiendo. Después de la primera llamada, el ID VIEW queda inválido y no devuelve datos.
-Ejemplo de llamada GET con params: `http://dominio.com/identities?idView=ID-UNICO-E-IRREPETIBLE-DE-UNA-SOLA-VIDA`
+Ejemplo de llamada GET con query: `http://dominio.com/identities?idView=ID-UNICO-E-IRREPETIBLE-DE-UNA-SOLA-VIDA`
 
 
 #### PASO FINAL: 
