@@ -79,7 +79,7 @@ Understand technical issues of blockchain technology is not easy for anyone to s
 * Scan and read image to get names and lastname from a photo ID.
 * Share verified data using an ID View.
 
-![Screenshot](./screenshots/modelo-sugerido.png)
+![Screenshot](./screenshots/EN-modelo-sugerido.png)
 
 
 ### NEXT RELEASES
