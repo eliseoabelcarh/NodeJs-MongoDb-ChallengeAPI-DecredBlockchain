@@ -1,8 +1,3 @@
-## OVERVIEW
-
-Proyecto propio desarrollado para Blockchain Learning Challenge - Decred / Talent Land Latinoamérica,
-utilizando datos nativos de la blockchain de Decred
-
 ## ACERCA DE ESTE PROYECTO
 
 Este proyecto es una idea original pensada para solucionar un problema específico
